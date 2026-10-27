@@ -2,7 +2,7 @@ import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 def message():
-    return {"message": "Hello trainee", "version": "1.0"}
+    return {"message": "Hello trainee example", "version": "1.0"}
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         data = {"status": "ok"} if self.path == "/health" else message()
